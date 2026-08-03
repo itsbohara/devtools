@@ -1,0 +1,49 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm validate
+      - run: pnpm astro build
+
+      # Only changed files: an unrelated PR must never fail because some other entry's host is
+      # having a bad day.
+      - name: Check links in changed tool files
+        run: |
+          files=$(git diff --name-only --diff-filter=d \
+            origin/${{ github.base_ref }}...HEAD -- 'data/tools/*.yml')
+          if [ -z "$files" ]; then
+            echo "no tool files changed"
+            exit 0
+          fi
+          status=0
+          for file in $files; do
+            url=$(grep -m1 '^url:' "$file" | sed 's/^url:[[:space:]]*//')
+            code=$(curl -sS -o /dev/null -w '%{http_code}' -L --max-time 20 \
+              -A 'Mozilla/5.0 (compatible; devtools-linkcheck)' "$url" || echo 000)
+            # 401/403/405 are bot walls and method restrictions, not dead links. Failing on those
+            # would train us to ignore this check.
+            case "$code" in
+              2*|3*|401|403|405) echo "  ok   $code  $url" ;;
+              *) echo "  FAIL $code  $url"; status=1 ;;
+            esac
+          done
+          exit $status

@@ -1,43 +1,57 @@
-# Astro Starter Kit: Minimal
+# devtools
 
-```sh
-pnpm create astro@latest -- --template minimal
+**[itsbohara.github.io/devtools](https://itsbohara.github.io/devtools)**
+
+Free developer tools, organised by what you're actually trying to do.
+
+Most lists file tools under vendor categories — "CDN", "IaaS", "Tunneling". That's not how the
+question arrives. Mid-task you think *"I need to expose localhost"*, and then you go hunting through
+ninety sections. This index is organised around that sentence instead.
+
+Every entry carries a note saying why it's the pick or what the catch is. That note is the point; the
+list length isn't.
+
+## How this repo works
+
+`data/` is the source of truth — a taxonomy of needs plus one YAML file per tool. Astro reads it at
+build time and emits static HTML: one page per need, plus a page for tools that serve several needs.
+CI validates the data on every PR and deploys on every push to `main`.
+
+```
+data/needs.yml        the task taxonomy
+data/tools/*.yml      one file per tool
+src/schema/           Zod validation, shared by the hook, CI and the build
+src/lib/load.ts       reads and validates the data
+src/pages/            index, /need/<slug>, /tool/<slug>
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Adding a tool means adding one file in `data/tools/`. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## 🚀 Project Structure
+## Pricing labels
 
-Inside of your Astro project, you'll see the following folders and files:
+| Label | Means |
+|---|---|
+| **Free** | Free forever, no paid tier gating the useful part |
+| **Free tier** | Genuinely usable free tier, paid plans above it |
+| **Open source** | Free if you run it yourself |
+| **Trial only** | Time-limited — shown as a warning, not a recommendation |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+## Freshness
+
+Each entry shows when it was last verified, and anything unverified for over a year says so plainly.
+
+There's no nightly link-checker, deliberately. A `200 OK` proves a URL resolves; it proves nothing
+about whether the free tier still exists, which is the rot that actually matters. So the dates are
+honest about their own age rather than automated into a promise this repo can't keep.
+
+Spotted something stale?
+[Open an issue](https://github.com/itsbohara/devtools/issues/new?template=add-tool.yml).
+
+## Local development
+
+```bash
+pnpm install
+pnpm dev        # http://localhost:4321/devtools
+pnpm test
+pnpm validate
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

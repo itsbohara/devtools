@@ -1,0 +1,48 @@
+name: Add a tool
+description: Suggest a free developer tool
+title: '[tool] '
+labels: [tool-suggestion]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://example.com
+    validations:
+      required: true
+
+  - type: input
+    id: need
+    attributes:
+      label: What do you need it for?
+      description: Plain words are fine — e.g. "exposing localhost"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: How is it free?
+      options:
+        - Free forever
+        - Free tier, paid plans exist
+        - Open source, self-hosted
+        - Free trial only
+    validations:
+      required: true
+
+  - type: textarea
+    id: note
+    attributes:
+      label: What's the catch?
+      description: The gotcha, the limit, or the reason this is the right pick over the alternatives.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: used
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have actually used this tool (entries nobody has used get declined)
+          required: true

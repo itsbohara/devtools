@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+# Push-triggered only. Do not add a `schedule:` here — a cron link-check produces failure noise for
+# transient bot walls and cannot detect the rot that matters (a free tier quietly becoming a trial).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # withastro/action detects pnpm from pnpm-lock.yaml and installs it itself.
+      - uses: withastro/action@v6
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
