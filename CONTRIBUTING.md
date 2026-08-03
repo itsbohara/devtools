@@ -19,6 +19,13 @@ verified: 2026-08-03
 
 Or run `pnpm add-tool https://example.com` and it scaffolds the file for you.
 
+**Using Claude Code?** This repo ships an `add-tool` skill at
+[`.claude/skills/add-tool/SKILL.md`](.claude/skills/add-tool/SKILL.md). Say *"add https://example.com"*
+and it will research the live page, tell you what it could and couldn't verify, ask what the page
+can't answer, and validate the entry before committing. It will not invent free-tier numbers, and it
+stops for you to confirm the note — read it even if you don't use Claude Code, since it spells out
+the standard every entry is held to.
+
 ## The `note` is the whole point
 
 It is the one thing this index has that a bigger list doesn't. Write the reason you'd pick this, or
