@@ -1,0 +1,60 @@
+---
+// Hidden until the script runs, so a visitor without JS gets the full browsable list rather than a
+// search box that does nothing.
+---
+
+<div class="mt-6" data-search hidden>
+  <input
+    type="search"
+    placeholder="Search needs and tools…"
+    aria-label="Search needs and tools"
+    class="w-full rounded-lg border border-neutral-300 px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+    data-search-input
+  />
+  <ul class="mt-3 hidden divide-y divide-neutral-200 dark:divide-neutral-800" data-search-results>
+  </ul>
+</div>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  const root = document.querySelector<HTMLElement>('[data-search]')!;
+  const input = root.querySelector<HTMLInputElement>('[data-search-input]')!;
+  const results = root.querySelector<HTMLUListElement>('[data-search-results]')!;
+  const browse = document.querySelector<HTMLElement>('[data-browse]');
+
+  root.hidden = false;
+
+  const entries = await fetch(`${import.meta.env.BASE_URL}/search.json`).then((res) => res.json());
+  const fuse = new Fuse(entries, { keys: ['title', 'subtitle', 'terms'], threshold: 0.35 });
+
+  const escape = (value: string) =>
+    value.replace(
+      /[&<>"']/g,
+      (char) =>
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char] ?? char,
+    );
+
+  input.addEventListener('input', () => {
+    const query = input.value.trim();
+    const hasQuery = query.length > 1;
+
+    results.classList.toggle('hidden', !hasQuery);
+    browse?.classList.toggle('hidden', hasQuery);
+
+    if (!hasQuery) {
+      results.innerHTML = '';
+      return;
+    }
+
+    results.innerHTML = fuse
+      .search(query)
+      .slice(0, 12)
+      .map(
+        ({ item }: any) =>
+          `<li class="py-2.5"><a href="${item.href}" class="underline">${escape(item.title)}</a>` +
+          `<span class="ml-2 text-sm text-neutral-400">${escape(item.subtitle)}</span></li>`,
+      )
+      .join('');
+  });
+</script>

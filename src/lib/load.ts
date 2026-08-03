@@ -1,10 +1,12 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, basename } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { load as parseYaml } from 'js-yaml';
 import { needSchema, toolSchema, validateCollection, type Need, type Tool } from '../schema';
 
-const DEFAULT_DATA_DIR = fileURLToPath(new URL('../../data', import.meta.url));
+// Anchored to the working directory, not `import.meta.url`: Astro bundles this module into
+// dist/.prerender/ before running getStaticPaths, so a path relative to the module would resolve
+// inside dist/ instead of the repo. Both `astro build` and the scripts run from the project root.
+const DEFAULT_DATA_DIR = join(process.cwd(), 'data');
 
 const todayISO = () => new Date().toISOString().slice(0, 10);
 

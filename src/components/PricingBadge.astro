@@ -1,0 +1,29 @@
+---
+import type { PRICING } from '../schema';
+
+interface Props {
+  pricing: (typeof PRICING)[number];
+}
+
+const { pricing } = Astro.props;
+
+const LABELS = {
+  free: 'Free',
+  freemium: 'Free tier',
+  'oss-selfhost': 'Open source',
+  trial: 'Trial only',
+} as const;
+
+// `trial` is styled as a warning rather than a neutral label: a time-limited offering is the thing
+// this index exists to flag, not to recommend.
+const STYLES = {
+  free: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300',
+  freemium: 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300',
+  'oss-selfhost': 'bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300',
+  trial: 'bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300',
+} as const;
+---
+
+<span class={`rounded px-1.5 py-0.5 text-xs font-medium whitespace-nowrap ${STYLES[pricing]}`}>
+  {LABELS[pricing]}
+</span>
