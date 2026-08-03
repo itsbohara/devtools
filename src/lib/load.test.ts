@@ -27,6 +27,12 @@ describe('loadData', () => {
     expect(() => loadData({ dataDir: fixture('broken-ref'), today: TODAY })).toThrow(/free-iconz/);
   });
 
+  it('names the offending file and field when a record fails its schema', () => {
+    expect(() => loadData({ dataDir: fixture('bad-field'), today: TODAY })).toThrow(
+      /data\/tools\/broken\.yml → pricing/,
+    );
+  });
+
   it('indexes tools by need', () => {
     const { toolsByNeed } = loadData({ dataDir: fixture('valid'), today: TODAY });
     expect(toolsByNeed.get('free-icons')?.map((t) => t.slug)).toEqual(['koboyo']);

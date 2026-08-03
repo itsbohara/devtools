@@ -1,0 +1,6 @@
+name: Broken
+url: https://broken.example
+needs: [free-icons]
+pricing: cheap
+note: invalid pricing on purpose
+verified: 2026-08-03
