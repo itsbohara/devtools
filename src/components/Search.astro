@@ -17,6 +17,7 @@
 
 <script>
   import Fuse from 'fuse.js';
+  import { url } from '../lib/url';
 
   const root = document.querySelector<HTMLElement>('[data-search]')!;
   const input = root.querySelector<HTMLInputElement>('[data-search-input]')!;
@@ -25,7 +26,7 @@
 
   root.hidden = false;
 
-  const entries = await fetch(`${import.meta.env.BASE_URL}/search.json`).then((res) => res.json());
+  const entries = await fetch(url('search.json')).then((res) => res.json());
   const fuse = new Fuse(entries, { keys: ['title', 'subtitle', 'terms'], threshold: 0.35 });
 
   const escape = (value: string) =>

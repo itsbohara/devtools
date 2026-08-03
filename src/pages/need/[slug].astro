@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import { loadData } from '../../lib/load';
+import { url } from '../../lib/url';
 
 export async function getStaticPaths() {
   const { needs, toolsByNeed } = loadData();
@@ -13,7 +14,6 @@ export async function getStaticPaths() {
 
 const { need, tools } = Astro.props;
 const today = new Date().toISOString().slice(0, 10);
-const base = import.meta.env.BASE_URL;
 const task = need.question.replace(/^I need to /, '');
 ---
 
@@ -21,7 +21,7 @@ const task = need.question.replace(/^I need to /, '');
   title={`${need.h1} — free tools`}
   description={`${tools.length} free tools for when you need to ${task}. Curated, each with a note on the catch.`}
 >
-  <a href={base} class="text-sm text-neutral-500 underline">← all needs</a>
+  <a href={url()} class="text-sm text-neutral-500 underline">← all needs</a>
   <h1 class="mt-4 text-3xl font-semibold tracking-tight">{need.h1}</h1>
   <p class="mt-2 text-neutral-500">{need.question}</p>
 

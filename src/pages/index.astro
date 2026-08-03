@@ -2,9 +2,9 @@
 import Base from '../layouts/Base.astro';
 import Search from '../components/Search.astro';
 import { loadData } from '../lib/load';
+import { url } from '../lib/url';
 
 const { needs, tools, toolsByNeed } = loadData();
-const base = import.meta.env.BASE_URL;
 const groups = [...new Set(needs.map((need) => need.group))];
 ---
 
@@ -31,7 +31,7 @@ const groups = [...new Set(needs.map((need) => need.group))];
               .map((need) => (
                 <li class="py-2.5">
                   <a
-                    href={`${base}/need/${need.slug}`}
+                    href={url(`need/${need.slug}`)}
                     class="group flex items-baseline justify-between gap-4"
                   >
                     <span class="group-hover:underline">{need.question}</span>

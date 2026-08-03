@@ -1,6 +1,7 @@
 ---
 import type { Tool } from '../schema';
 import { verifiedAge, isStale } from '../lib/verified';
+import { url } from '../lib/url';
 import PricingBadge from './PricingBadge.astro';
 
 interface Props {
@@ -9,7 +10,6 @@ interface Props {
 }
 
 const { tool, today } = Astro.props;
-const base = import.meta.env.BASE_URL;
 const hasOwnPage = tool.needs.length >= 2;
 const stale = isStale(tool.verified, today);
 ---
@@ -26,7 +26,7 @@ const stale = isStale(tool.verified, today);
     <PricingBadge pricing={tool.pricing} />
     {
       hasOwnPage && (
-        <a href={`${base}/tool/${tool.slug}`} class="text-xs text-neutral-500 underline">
+        <a href={url(`tool/${tool.slug}`)} class="text-xs text-neutral-500 underline">
           {tool.needs.length} uses
         </a>
       )

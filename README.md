@@ -1,6 +1,6 @@
 # devtools
 
-**[itsbohara.github.io/devtools](https://itsbohara.github.io/devtools)**
+**[tools.itsbohara.com](https://tools.itsbohara.com)**
 
 Free developer tools, organised by what you're actually trying to do.
 
@@ -51,7 +51,7 @@ Spotted something stale?
 
 ```bash
 pnpm install
-pnpm dev        # http://localhost:4321/devtools
+pnpm dev        # http://localhost:4321
 pnpm test
 pnpm validate
 ```

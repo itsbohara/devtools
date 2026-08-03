@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { url } from '../lib/url';
 
 interface Props {
   title: string;
@@ -7,8 +8,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const home = import.meta.env.BASE_URL;
+
+// `build.format: 'file'` puts .html on Astro.url.pathname, but the sitemap and every internal link
+// use extensionless URLs. Left as-is, canonical would nominate a different URL than the sitemap.
+const cleanPath = Astro.url.pathname.replace(/index\.html$/, '').replace(/\.html$/, '');
+const canonical = new URL(cleanPath, Astro.site).href;
 ---
 
 <!doctype html>
@@ -19,7 +23,7 @@ const home = import.meta.env.BASE_URL;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href={`${home}/favicon.svg`} type="image/svg+xml" />
+    <link rel="icon" href={url("favicon.svg")} type="image/svg+xml" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -29,7 +33,7 @@ const home = import.meta.env.BASE_URL;
   <body class="min-h-dvh bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
     <header class="border-b border-neutral-200 dark:border-neutral-800">
       <nav class="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
-        <a href={home} class="font-semibold tracking-tight">devtools</a>
+        <a href={url()} class="font-semibold tracking-tight">devtools</a>
         <a
           href="https://github.com/itsbohara/devtools"
           class="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100"

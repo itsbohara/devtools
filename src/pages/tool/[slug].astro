@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PricingBadge from '../../components/PricingBadge.astro';
 import { loadData } from '../../lib/load';
 import { verifiedAge, isStale } from '../../lib/verified';
+import { url } from '../../lib/url';
 
 // Only multi-need tools get a page. A single-need tool would render a near-duplicate of the need
 // page it came from, and a swarm of those reads as doorway pages to search engines.
@@ -20,7 +21,6 @@ export async function getStaticPaths() {
 
 const { tool, needs } = Astro.props;
 const today = new Date().toISOString().slice(0, 10);
-const base = import.meta.env.BASE_URL;
 const stale = isStale(tool.verified, today);
 ---
 
@@ -28,7 +28,7 @@ const stale = isStale(tool.verified, today);
   title={`What's free on ${tool.name}?`}
   description={`${tool.name} covers ${needs.length} developer needs on its free tier. ${tool.note}`}
 >
-  <a href={base} class="text-sm text-neutral-500 underline">← all needs</a>
+  <a href={url()} class="text-sm text-neutral-500 underline">← all needs</a>
 
   <h1 class="mt-4 flex flex-wrap items-center gap-3 text-3xl font-semibold tracking-tight">
     {tool.name}
@@ -45,7 +45,7 @@ const stale = isStale(tool.verified, today);
     {
       needs.map((need) => (
         <li class="py-2.5">
-          <a href={`${base}/need/${need.slug}`} class="underline">
+          <a href={url(`need/${need.slug}`)} class="underline">
             {need.question}
           </a>
         </li>

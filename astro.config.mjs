@@ -5,11 +5,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
-// `base` is load-bearing: every internal link and asset path resolves against it, so changing it
-// later invalidates every URL the site has published. It must match the GitHub repo name.
+// Served at the root of a custom domain, so there is no `base`. If this ever moves back to a
+// github.io project page, set `base: '/devtools'` — every internal link goes through src/lib/url.ts
+// and will adapt, but the published URLs would change.
 export default defineConfig({
-  site: 'https://itsbohara.github.io',
-  base: '/devtools',
+  site: 'https://tools.itsbohara.com',
   trailingSlash: 'never',
   build: { format: 'file' },
 

@@ -1,7 +1,6 @@
 import type { APIRoute } from 'astro';
 import { loadData } from '../lib/load';
-
-const base = import.meta.env.BASE_URL;
+import { url } from '../lib/url';
 
 // `aliases` are folded into the searchable terms here. This is the only place they are used, which
 // is why they never become routes and can be reworded without breaking a URL.
@@ -10,7 +9,7 @@ export const GET: APIRoute = () => {
 
   const entries = [
     ...needs.map((need) => ({
-      href: `${base}/need/${need.slug}`,
+      href: url(`need/${need.slug}`),
       title: need.question,
       subtitle: `${toolsByNeed.get(need.slug)!.length} tools`,
       terms: [need.h1, need.group, ...need.aliases].join(' '),
@@ -20,7 +19,7 @@ export const GET: APIRoute = () => {
       // that would 404.
       const hasOwnPage = tool.needs.length >= 2;
       return {
-        href: hasOwnPage ? `${base}/tool/${tool.slug}` : `${base}/need/${tool.needs[0]}`,
+        href: hasOwnPage ? url(`tool/${tool.slug}`) : url(`need/${tool.needs[0]}`),
         title: tool.name,
         subtitle: tool.note,
         terms: tool.needs.join(' '),
