@@ -1,0 +1,6 @@
+name: "Vercel"
+url: https://vercel.com
+needs: [static-site-hosting, cron-hosting]
+pricing: freemium
+note: "Best-in-class DX for Next.js, but the free tier is non-commercial use only — that catches people out"
+verified: 2026-08-03

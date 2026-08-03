@@ -1,0 +1,6 @@
+name: "json-server"
+url: https://github.com/typicode/json-server
+needs: [mock-api]
+pricing: oss-selfhost
+note: "Turns a plain JSON file into a real REST API locally — ideal before the backend exists"
+verified: 2026-08-03

@@ -1,0 +1,6 @@
+name: "JSONPlaceholder"
+url: https://jsonplaceholder.typicode.com
+needs: [mock-api]
+pricing: free
+note: "Zero-setup fake REST API for demos; the data is fixed and writes are only pretended"
+verified: 2026-08-03

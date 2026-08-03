@@ -1,0 +1,6 @@
+name: "Phosphor Icons"
+url: https://phosphoricons.com
+needs: [free-icons]
+pricing: oss-selfhost
+note: "MIT with six weights per icon — useful when you need both a thin and a filled variant"
+verified: 2026-08-03

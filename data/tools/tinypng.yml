@@ -1,0 +1,6 @@
+name: "TinyPNG"
+url: https://tinypng.com
+needs: [image-compression]
+pricing: freemium
+note: "Excellent PNG and JPEG results; free web use is capped per batch and the API needs a key"
+verified: 2026-08-03

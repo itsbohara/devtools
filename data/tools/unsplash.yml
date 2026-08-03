@@ -1,0 +1,6 @@
+name: "Unsplash"
+url: https://unsplash.com
+needs: [placeholder-images]
+pricing: freemium
+note: "Real photography under a free licence; the API needs a key and rate-limits on the free tier"
+verified: 2026-08-03

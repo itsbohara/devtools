@@ -1,0 +1,6 @@
+name: "Faker"
+url: https://fakerjs.dev
+needs: [test-data-generator]
+pricing: oss-selfhost
+note: "The library for generating names, addresses and dates in seed scripts and tests"
+verified: 2026-08-03

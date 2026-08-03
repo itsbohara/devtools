@@ -1,0 +1,6 @@
+name: "ngrok"
+url: https://ngrok.com
+needs: [localhost-tunnel, webhook-inspector]
+pricing: freemium
+note: "Free tier gives a random subdomain that changes on every restart, but the request inspector is the best of any tunnel"
+verified: 2026-08-03

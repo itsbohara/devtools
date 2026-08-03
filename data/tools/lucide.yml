@@ -1,0 +1,6 @@
+name: "Lucide"
+url: https://lucide.dev
+needs: [free-icons]
+pricing: oss-selfhost
+note: "ISC-licensed, tree-shakeable and consistent in stroke weight — the safe default"
+verified: 2026-08-03

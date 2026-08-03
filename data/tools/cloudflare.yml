@@ -1,0 +1,6 @@
+name: "Cloudflare"
+url: https://www.cloudflare.com
+needs: [static-site-hosting, object-storage, cron-hosting]
+pricing: freemium
+note: "R2 charges no egress fees, which is the real reason to pick it over S3; Pages and Workers cron are free too"
+verified: 2026-08-03

@@ -1,0 +1,6 @@
+name: "MockAPI"
+url: https://mockapi.io
+needs: [mock-api]
+pricing: freemium
+note: "Define a schema in the UI and get a persistent hosted API; the free tier limits project count"
+verified: 2026-08-03

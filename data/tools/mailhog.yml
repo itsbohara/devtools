@@ -1,0 +1,6 @@
+name: "MailHog"
+url: https://github.com/mailhog/MailHog
+needs: [test-email-inbox]
+pricing: oss-selfhost
+note: "Still in countless docker-compose files, but unmaintained — reach for Mailpit in new setups"
+verified: 2026-08-03

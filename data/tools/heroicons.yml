@@ -1,0 +1,6 @@
+name: "Heroicons"
+url: https://heroicons.com
+needs: [free-icons]
+pricing: oss-selfhost
+note: "MIT, from the Tailwind team; a small set, but it sits naturally with Tailwind spacing"
+verified: 2026-08-03

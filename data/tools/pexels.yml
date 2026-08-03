@@ -1,0 +1,6 @@
+name: "Pexels"
+url: https://pexels.com
+needs: [placeholder-images]
+pricing: freemium
+note: "Photos and stock video under a free licence; an API key is required for programmatic use"
+verified: 2026-08-03

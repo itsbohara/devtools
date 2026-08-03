@@ -1,0 +1,6 @@
+name: "Tabler Icons"
+url: https://tabler.io/icons
+needs: [free-icons]
+pricing: oss-selfhost
+note: "MIT, thousands of outline icons drawn on a strict 24px grid"
+verified: 2026-08-03

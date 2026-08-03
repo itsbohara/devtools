@@ -1,0 +1,6 @@
+name: "Backblaze B2"
+url: https://www.backblaze.com/cloud-storage
+needs: [object-storage]
+pricing: freemium
+note: "S3-compatible and cheap; free egress to Cloudflare is what makes the pairing worth it"
+verified: 2026-08-03

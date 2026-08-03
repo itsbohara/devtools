@@ -1,0 +1,6 @@
+name: "Google Cloud Run"
+url: https://cloud.google.com/run
+needs: [container-hosting]
+pricing: freemium
+note: "Scales containers to zero and has a genuine perpetual free tier; requires a billing account"
+verified: 2026-08-03

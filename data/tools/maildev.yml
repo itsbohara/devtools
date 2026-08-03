@@ -1,0 +1,6 @@
+name: "MailDev"
+url: https://maildev.github.io/maildev/
+needs: [test-email-inbox]
+pricing: oss-selfhost
+note: "npm-installable SMTP catcher, handy when you would rather not run Docker"
+verified: 2026-08-03

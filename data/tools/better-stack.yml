@@ -1,0 +1,6 @@
+name: "Better Stack"
+url: https://betterstack.com
+needs: [uptime-monitoring]
+pricing: freemium
+note: "Uptime checks plus a hosted status page on the free tier"
+verified: 2026-08-03

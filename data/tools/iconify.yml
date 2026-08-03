@@ -1,0 +1,6 @@
+name: "Iconify"
+url: https://iconify.design
+needs: [free-icons]
+pricing: oss-selfhost
+note: "Unified search across 200+ icon sets; check each set licence individually, they differ"
+verified: 2026-08-03

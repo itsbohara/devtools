@@ -1,0 +1,6 @@
+name: "Tailscale"
+url: https://tailscale.com
+needs: [localhost-tunnel]
+pricing: freemium
+note: "Funnel exposes a port publicly from your tailnet — pick it when you want a stable URL, not a throwaway"
+verified: 2026-08-03

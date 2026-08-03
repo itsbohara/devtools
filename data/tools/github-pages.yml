@@ -1,0 +1,6 @@
+name: "GitHub Pages"
+url: https://pages.github.com
+needs: [static-site-hosting]
+pricing: free
+note: "Free and unmetered for public repos; publishing from a private repo needs a paid plan"
+verified: 2026-08-03

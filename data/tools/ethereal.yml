@@ -1,0 +1,6 @@
+name: "Ethereal Email"
+url: https://ethereal.email
+needs: [test-email-inbox]
+pricing: free
+note: "Nodemailer's throwaway SMTP account, created on demand — nothing is ever actually delivered"
+verified: 2026-08-03

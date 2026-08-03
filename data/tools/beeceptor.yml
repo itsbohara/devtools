@@ -1,0 +1,6 @@
+name: "Beeceptor"
+url: https://beeceptor.com
+needs: [webhook-inspector, mock-api]
+pricing: freemium
+note: "Mock an endpoint with matching rules straight from the browser; the free plan caps daily requests"
+verified: 2026-08-03

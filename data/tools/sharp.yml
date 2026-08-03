@@ -1,0 +1,6 @@
+name: "sharp"
+url: https://sharp.pixelplumbing.com
+needs: [image-compression]
+pricing: oss-selfhost
+note: "The Node library to reach for inside a build step or an upload pipeline"
+verified: 2026-08-03

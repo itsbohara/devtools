@@ -1,0 +1,6 @@
+name: "Placehold.co"
+url: https://placehold.co
+needs: [placeholder-images]
+pricing: free
+note: "Plain coloured boxes with text — better than photos when you are checking layout, not mood"
+verified: 2026-08-03

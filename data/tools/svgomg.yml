@@ -1,0 +1,6 @@
+name: "SVGOMG"
+url: https://jakearchibald.github.io/svgomg/
+needs: [image-compression]
+pricing: free
+note: "SVG-specific, and strips the editor cruft that often halves the file size"
+verified: 2026-08-03

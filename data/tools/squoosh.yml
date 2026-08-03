@@ -1,0 +1,6 @@
+name: "Squoosh"
+url: https://squoosh.app
+needs: [image-compression]
+pricing: free
+note: "Runs in the browser with nothing uploaded anywhere; the best way to eyeball quality against size"
+verified: 2026-08-03

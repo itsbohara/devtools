@@ -1,0 +1,6 @@
+name: "CockroachDB"
+url: https://cockroachlabs.com
+needs: [free-postgres]
+pricing: freemium
+note: "Postgres-wire compatible and distributed, but not a drop-in for every Postgres feature"
+verified: 2026-08-03

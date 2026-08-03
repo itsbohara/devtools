@@ -1,0 +1,6 @@
+name: "Fly.io"
+url: https://fly.io
+needs: [container-hosting]
+pricing: freemium
+note: "Runs your Docker image close to users; wants a card on file even for small workloads"
+verified: 2026-08-03

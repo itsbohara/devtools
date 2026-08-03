@@ -1,0 +1,6 @@
+name: "Webhook.site"
+url: https://webhook.site
+needs: [webhook-inspector, mock-api]
+pricing: freemium
+note: "Instant URL that records every request; free URLs expire, so never wire one into something lasting"
+verified: 2026-08-03

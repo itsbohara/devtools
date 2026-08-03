@@ -1,0 +1,6 @@
+name: "Mockoon"
+url: https://mockoon.com
+needs: [mock-api]
+pricing: oss-selfhost
+note: "Desktop app plus CLI for local mock servers; no account and works fully offline"
+verified: 2026-08-03

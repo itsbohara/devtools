@@ -1,0 +1,6 @@
+name: "Render"
+url: https://render.com
+needs: [container-hosting, static-site-hosting]
+pricing: freemium
+note: "Straightforward Docker and static hosting; free web services sleep when idle and cold-start slowly"
+verified: 2026-08-03

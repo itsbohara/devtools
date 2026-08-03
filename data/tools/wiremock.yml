@@ -1,0 +1,6 @@
+name: "WireMock"
+url: https://wiremock.org
+needs: [mock-api]
+pricing: oss-selfhost
+note: "Heavier JVM mock server, but unmatched at request matching and stubbing awkward edge cases"
+verified: 2026-08-03

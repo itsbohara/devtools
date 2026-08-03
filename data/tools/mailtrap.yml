@@ -1,0 +1,6 @@
+name: "Mailtrap"
+url: https://mailtrap.io
+needs: [test-email-inbox]
+pricing: freemium
+note: "Fake SMTP inbox that catches everything your app sends; the free tier caps monthly volume"
+verified: 2026-08-03

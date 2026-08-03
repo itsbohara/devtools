@@ -1,0 +1,6 @@
+name: "localtunnel"
+url: https://theboroer.github.io/localtunnel-www/
+needs: [localhost-tunnel]
+pricing: oss-selfhost
+note: "One npx away with no account, but the shared public relay is frequently slow or down"
+verified: 2026-08-03

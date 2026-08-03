@@ -1,0 +1,6 @@
+name: "Fontshare"
+url: https://fontshare.com
+needs: [free-fonts]
+pricing: free
+note: "Free-for-commercial-use faces from a real type foundry; stronger display fonts than Google Fonts"
+verified: 2026-08-03

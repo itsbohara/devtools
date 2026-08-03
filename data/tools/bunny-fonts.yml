@@ -1,0 +1,6 @@
+name: "Bunny Fonts"
+url: https://fonts.bunny.net
+needs: [free-fonts]
+pricing: free
+note: "Drop-in Google Fonts replacement with no tracking and the same API shape"
+verified: 2026-08-03

@@ -1,0 +1,6 @@
+name: "UptimeRobot"
+url: https://uptimerobot.com
+needs: [uptime-monitoring]
+pricing: freemium
+note: "The default free monitor; free checks run at a coarser interval than paid ones"
+verified: 2026-08-03

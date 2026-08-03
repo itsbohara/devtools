@@ -1,0 +1,6 @@
+name: "Random User Generator"
+url: https://randomuser.me
+needs: [test-data-generator]
+pricing: free
+note: "Fake user JSON complete with avatars over a plain API, no key needed"
+verified: 2026-08-03

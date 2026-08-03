@@ -1,0 +1,6 @@
+name: "Railway"
+url: https://railway.com
+needs: [container-hosting, free-postgres]
+pricing: trial
+note: "Excellent DX, but the free offering is now a one-off trial credit rather than an ongoing tier"
+verified: 2026-08-03

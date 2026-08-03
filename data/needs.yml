@@ -1,0 +1,91 @@
+# The task taxonomy. `slug` becomes a live URL and is frozen once published; `question`, `h1` and
+# `aliases` are display copy and can be reworded freely at any time.
+- slug: localhost-tunnel
+  question: "I need to expose localhost"
+  h1: "Expose localhost to the internet"
+  group: networking
+  aliases: [ngrok alternative, share local server, webhook tunnel]
+
+- slug: webhook-inspector
+  question: "I need to inspect a webhook"
+  h1: "Inspect and debug incoming webhooks"
+  group: networking
+  aliases: [webhook debugger, request bin, see request payload]
+
+- slug: mock-api
+  question: "I need to fake an API"
+  h1: "Mock an API without writing a backend"
+  group: backend
+  aliases: [fake rest api, json placeholder, stub endpoint]
+
+- slug: test-email-inbox
+  question: "I need to send a test email"
+  h1: "Catch and inspect test emails"
+  group: backend
+  aliases: [fake smtp, email sandbox, catch outgoing mail]
+
+- slug: free-icons
+  question: "I need an icon"
+  h1: "Free icon sets for developers"
+  group: assets
+  aliases: [svg icons, icon library, open source icons]
+
+- slug: free-fonts
+  question: "I need a font"
+  h1: "Free and open-licensed fonts"
+  group: assets
+  aliases: [webfonts, open source typefaces]
+
+- slug: placeholder-images
+  question: "I need a placeholder image"
+  h1: "Placeholder and stock images"
+  group: assets
+  aliases: [dummy image, lorem picsum, free stock photos]
+
+- slug: image-compression
+  question: "I need to compress an image"
+  h1: "Compress and optimise images"
+  group: assets
+  aliases: [optimise png, shrink jpeg, image optimiser]
+
+- slug: static-site-hosting
+  question: "I need to host a static site"
+  h1: "Free static site hosting"
+  group: hosting
+  aliases: [free web hosting, deploy static site, jamstack host]
+
+- slug: container-hosting
+  question: "I need to host a container"
+  h1: "Free container and app hosting"
+  group: hosting
+  aliases: [free docker hosting, deploy container, paas free tier]
+
+- slug: free-postgres
+  question: "I need a Postgres database"
+  h1: "Free Postgres hosting"
+  group: data
+  aliases: [free database, managed postgres free tier, hosted sql]
+
+- slug: object-storage
+  question: "I need to store files"
+  h1: "Free object storage"
+  group: data
+  aliases: [s3 alternative, free file storage, blob storage]
+
+- slug: test-data-generator
+  question: "I need fake test data"
+  h1: "Generate realistic fake data"
+  group: data
+  aliases: [mock data, dummy data, seed data generator]
+
+- slug: uptime-monitoring
+  question: "I need to monitor uptime"
+  h1: "Free uptime and status monitoring"
+  group: ops
+  aliases: [free monitoring, status page, ping my site]
+
+- slug: cron-hosting
+  question: "I need to run a scheduled job"
+  h1: "Run cron jobs without a server"
+  group: ops
+  aliases: [free cron, scheduled task, cron as a service]

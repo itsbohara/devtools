@@ -1,0 +1,6 @@
+name: "Supabase"
+url: https://supabase.com
+needs: [free-postgres, object-storage]
+pricing: freemium
+note: "Postgres plus auth and storage in one; free projects pause after a stretch of inactivity"
+verified: 2026-08-03

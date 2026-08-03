@@ -1,0 +1,6 @@
+name: "Mockaroo"
+url: https://mockaroo.com
+needs: [test-data-generator]
+pricing: freemium
+note: "Design a schema in the browser and download CSV or SQL; the free tier caps rows per download"
+verified: 2026-08-03

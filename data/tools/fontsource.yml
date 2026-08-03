@@ -1,0 +1,6 @@
+name: "Fontsource"
+url: https://fontsource.org
+needs: [free-fonts]
+pricing: oss-selfhost
+note: "Open fonts as npm packages, so self-hosting becomes one install instead of manual downloads"
+verified: 2026-08-03

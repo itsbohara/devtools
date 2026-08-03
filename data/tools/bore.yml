@@ -1,0 +1,6 @@
+name: "bore"
+url: https://github.com/ekzhang/bore
+needs: [localhost-tunnel]
+pricing: oss-selfhost
+note: "Tiny Rust TCP tunnel you can self-host in one command; no HTTP inspection, just a pipe"
+verified: 2026-08-03

@@ -1,0 +1,6 @@
+name: "TryCloudflare"
+url: https://trycloudflare.com
+needs: [localhost-tunnel]
+pricing: free
+note: "Throwaway public URL for localhost with zero signup — run cloudflared and go"
+verified: 2026-08-03

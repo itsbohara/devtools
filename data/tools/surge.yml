@@ -1,0 +1,6 @@
+name: "Surge"
+url: https://surge.sh
+needs: [static-site-hosting]
+pricing: freemium
+note: "One command from a local folder to a live URL, with no git repo required"
+verified: 2026-08-03

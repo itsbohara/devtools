@@ -1,0 +1,6 @@
+name: "Lorem Picsum"
+url: https://picsum.photos
+needs: [placeholder-images]
+pricing: free
+note: "URL-driven random photos at any dimension, nothing to sign up for"
+verified: 2026-08-03

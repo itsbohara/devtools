@@ -1,0 +1,6 @@
+name: "cron-job.org"
+url: https://cron-job.org
+needs: [cron-hosting]
+pricing: free
+note: "Calls a URL on a schedule, free and with no card; fine for keep-alive pings"
+verified: 2026-08-03

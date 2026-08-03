@@ -1,0 +1,6 @@
+name: "Smee.io"
+url: https://smee.io
+needs: [webhook-inspector]
+pricing: free
+note: "Forwards webhooks through to localhost; built for GitHub App development and still the easiest option there"
+verified: 2026-08-03

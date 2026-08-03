@@ -1,0 +1,6 @@
+name: "MinIO"
+url: https://min.io
+needs: [object-storage]
+pricing: oss-selfhost
+note: "S3-compatible server you run yourself — the standard way to get real S3 behaviour in tests"
+verified: 2026-08-03

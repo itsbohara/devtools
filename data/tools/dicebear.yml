@@ -1,0 +1,6 @@
+name: "DiceBear"
+url: https://dicebear.com
+needs: [placeholder-images]
+pricing: oss-selfhost
+note: "Deterministic avatars generated from a seed string — ideal for fake user lists"
+verified: 2026-08-03

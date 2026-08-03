@@ -1,0 +1,6 @@
+name: "Uptime Kuma"
+url: https://github.com/louislam/uptime-kuma
+needs: [uptime-monitoring]
+pricing: oss-selfhost
+note: "Self-hosted and genuinely pleasant; the catch is it cannot tell you when its own host is down"
+verified: 2026-08-03

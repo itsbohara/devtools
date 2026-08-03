@@ -1,0 +1,6 @@
+name: "Google Fonts"
+url: https://fonts.google.com
+needs: [free-fonts]
+pricing: free
+note: "The default choice; download and self-host the files rather than hotlinking, for privacy and speed"
+verified: 2026-08-03

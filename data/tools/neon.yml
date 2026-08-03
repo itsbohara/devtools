@@ -1,0 +1,6 @@
+name: "Neon"
+url: https://neon.com
+needs: [free-postgres]
+pricing: freemium
+note: "Serverless Postgres that scales to zero, with database branching that mirrors your git branches"
+verified: 2026-08-03

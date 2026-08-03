@@ -1,0 +1,6 @@
+name: "Netlify"
+url: https://netlify.com
+needs: [static-site-hosting]
+pricing: freemium
+note: "Generous free tier with deploy previews; build minutes are the limit you will hit first"
+verified: 2026-08-03

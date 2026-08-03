@@ -1,0 +1,6 @@
+name: "Mailpit"
+url: https://mailpit.axllent.org
+needs: [test-email-inbox]
+pricing: oss-selfhost
+note: "Single binary SMTP catcher with a web UI; the maintained successor to MailHog"
+verified: 2026-08-03

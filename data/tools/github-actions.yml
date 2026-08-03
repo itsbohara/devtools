@@ -1,0 +1,6 @@
+name: "GitHub Actions"
+url: https://github.com/features/actions
+needs: [cron-hosting]
+pricing: freemium
+note: "Scheduled workflows are free and unmetered on public repos, though schedules can be delayed under load"
+verified: 2026-08-03

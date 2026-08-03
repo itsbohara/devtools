@@ -1,0 +1,6 @@
+name: "Pipedream RequestBin"
+url: https://pipedream.com/requestbin
+needs: [webhook-inspector]
+pricing: freemium
+note: "The original RequestBin — inspect the payload, then optionally pipe it into a workflow"
+verified: 2026-08-03

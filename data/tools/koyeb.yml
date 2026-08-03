@@ -1,0 +1,6 @@
+name: "Koyeb"
+url: https://koyeb.com
+needs: [container-hosting]
+pricing: freemium
+note: "A free instance for containers, and no card required to get started"
+verified: 2026-08-03

@@ -1,0 +1,6 @@
+name: "Healthchecks.io"
+url: https://healthchecks.io
+needs: [uptime-monitoring, cron-hosting]
+pricing: freemium
+note: "Dead-man's-switch monitoring — your cron pings it, and it alerts you when the ping fails to arrive"
+verified: 2026-08-03
