@@ -17,6 +17,13 @@ export async function getStaticPaths() {
         subtitle: `${plural(tools.length, 'curated pick')}, each with a note on the catch`,
       },
     },
+    {
+      params: { slug: '404' },
+      props: {
+        title: "That page doesn't exist",
+        subtitle: 'Search the index, or browse by task',
+      },
+    },
     ...needs.map((need) => ({
       params: { slug: `need/${need.slug}` },
       props: {

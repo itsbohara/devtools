@@ -5,9 +5,10 @@ import { url } from '../lib/url';
 interface Props {
   title: string;
   description: string;
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 
 // `build.format: 'file'` puts .html on Astro.url.pathname, but the sitemap and every internal link
 // use extensionless URLs. Left as-is, canonical would nominate a different URL than the sitemap.
@@ -27,6 +28,7 @@ const ogImage = new URL(url(`og/${ogSlug}.png`), Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={url("favicon.svg")} type="image/svg+xml" />
     <meta property="og:title" content={title} />

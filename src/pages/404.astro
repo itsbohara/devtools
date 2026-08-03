@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import Search from '../components/Search.astro';
+import NeedList from '../components/NeedList.astro';
+import { loadData } from '../lib/load';
+import { url } from '../lib/url';
+
+const { needs, toolsByNeed } = loadData();
+---
+
+<Base
+  title="Not found — devtools"
+  description="That page does not exist. Search the index or browse by task."
+  noindex
+>
+  <h1 class="text-3xl font-semibold tracking-tight">That page doesn't exist</h1>
+  <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+    The link may be old, or a tool may have been renamed. Search below, or pick up from
+    <a href={url()} class="underline">the full list</a>.
+  </p>
+
+  <Search />
+
+  <div data-browse>
+    <NeedList needs={needs} toolsByNeed={toolsByNeed} />
+  </div>
+
+  <p class="mt-12 text-sm text-neutral-500">
+    Expected something to be here?
+    <a
+      href="https://github.com/itsbohara/devtools/issues/new?template=add-tool.yml"
+      class="underline">Let me know</a
+    >.
+  </p>
+</Base>

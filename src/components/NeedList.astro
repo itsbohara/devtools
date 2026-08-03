@@ -1,0 +1,37 @@
+---
+import type { Need, Tool } from '../schema';
+import { url } from '../lib/url';
+
+interface Props {
+  needs: Need[];
+  toolsByNeed: Map<string, Tool[]>;
+}
+
+const { needs, toolsByNeed } = Astro.props;
+const groups = [...new Set(needs.map((need) => need.group))];
+---
+
+{
+  groups.map((group) => (
+    <section class="mt-10">
+      <h2 class="text-xs font-semibold tracking-wider text-neutral-400 uppercase">{group}</h2>
+      <ul class="mt-3 divide-y divide-neutral-200 dark:divide-neutral-800">
+        {needs
+          .filter((need) => need.group === group)
+          .map((need) => (
+            <li class="py-2.5">
+              <a
+                href={url(`need/${need.slug}`)}
+                class="group flex items-baseline justify-between gap-4"
+              >
+                <span class="group-hover:underline">{need.question}</span>
+                <span class="shrink-0 text-sm text-neutral-400">
+                  {toolsByNeed.get(need.slug)!.length}
+                </span>
+              </a>
+            </li>
+          ))}
+      </ul>
+    </section>
+  ))
+}
