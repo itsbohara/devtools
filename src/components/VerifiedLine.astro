@@ -1,0 +1,33 @@
+---
+interface Props {
+  verified: string;
+  class?: string;
+}
+
+// Deliberately renders no relative time and takes no `today`: this is a static site, so anything
+// derived from the build date freezes into the HTML and keeps asserting itself long after it stops
+// being true. The absolute date is the only claim that survives an unbuilt month. The script below
+// upgrades it to "2 days ago" — or to the staleness warning — against the reader's clock.
+const { verified, class: className } = Astro.props;
+---
+
+<p class={className} data-verified={verified}>
+  <span data-verified-label>verified</span>{' '}<time datetime={verified}>{verified}</time>
+</p>
+
+<script>
+  import { verifiedLine } from '../lib/verified';
+
+  const today = new Date().toISOString().slice(0, 10);
+
+  for (const el of document.querySelectorAll<HTMLElement>('[data-verified]')) {
+    const verified = el.dataset.verified;
+    const label = el.querySelector('[data-verified-label]');
+    const time = el.querySelector('time');
+    if (!verified || !label || !time) continue;
+
+    const line = verifiedLine(verified, today);
+    label.textContent = line.label;
+    time.textContent = line.value;
+  }
+</script>

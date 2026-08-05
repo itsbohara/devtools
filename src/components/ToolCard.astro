@@ -1,17 +1,15 @@
 ---
 import type { Tool } from '../schema';
-import { verifiedAge, isStale } from '../lib/verified';
 import { url } from '../lib/url';
 import PricingBadge from './PricingBadge.astro';
+import VerifiedLine from './VerifiedLine.astro';
 
 interface Props {
   tool: Tool;
-  today: string;
 }
 
-const { tool, today } = Astro.props;
+const { tool } = Astro.props;
 const hasOwnPage = tool.needs.length >= 2;
-const stale = isStale(tool.verified, today);
 ---
 
 <li class="border-b border-neutral-200 py-4 last:border-0 dark:border-neutral-800">
@@ -33,7 +31,5 @@ const stale = isStale(tool.verified, today);
     }
   </div>
   <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">{tool.note}</p>
-  <p class="mt-1 text-xs text-neutral-400">
-    {stale ? `unverified since ${tool.verified}` : `verified ${verifiedAge(tool.verified, today)}`}
-  </p>
+  <VerifiedLine verified={tool.verified} class="mt-1 text-xs text-neutral-400" />
 </li>
