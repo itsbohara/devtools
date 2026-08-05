@@ -1,0 +1,6 @@
+name: "dotLottie"
+url: https://github.com/LottieFiles/dotlottie-web
+needs: [animate-icons]
+pricing: oss-selfhost
+note: "MIT Rust/WASM Lottie player, ~11 releases in three months. Pulls a ~1.8 MB wasm from jsDelivr at runtime unless you setWasmUrl and self-host it; still 0.x"
+verified: 2026-08-05

@@ -1,0 +1,6 @@
+name: "lottie-web"
+url: https://github.com/airbnb/lottie-web
+needs: [animate-icons]
+pricing: oss-selfhost
+note: "The original After Effects player, MIT. lottie_light.min.js is 46 KB gzip vs 75 KB for the full build; last npm release May 2025, so coasting rather than dead"
+verified: 2026-08-05
