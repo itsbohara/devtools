@@ -13,7 +13,6 @@ export async function getStaticPaths() {
 }
 
 const { need, tools } = Astro.props;
-const today = new Date().toISOString().slice(0, 10);
 const task = need.question.replace(/^I need to /, '');
 ---
 
@@ -26,6 +25,6 @@ const task = need.question.replace(/^I need to /, '');
   <p class="mt-2 text-neutral-500">{need.question}</p>
 
   <ul class="mt-8">
-    {tools.map((tool) => <ToolCard tool={tool} today={today} />)}
+    {tools.map((tool) => <ToolCard tool={tool} />)}
   </ul>
 </Base>

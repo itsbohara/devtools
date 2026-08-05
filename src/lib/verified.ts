@@ -18,3 +18,10 @@ export function verifiedAge(verified: string, today: string): string {
 export function isStale(verified: string, today: string): boolean {
   return daysBetween(verified, today) > STALE_AFTER_DAYS;
 }
+
+/** The rendered verified line, split so the client can rebuild it from `data-verified` alone. */
+export function verifiedLine(verified: string, today: string): { label: string; value: string } {
+  return isStale(verified, today)
+    ? { label: 'unverified since', value: verified }
+    : { label: 'verified', value: verifiedAge(verified, today) };
+}
