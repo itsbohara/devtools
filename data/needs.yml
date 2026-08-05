@@ -30,6 +30,12 @@
   group: assets
   aliases: [svg icons, icon library, open source icons]
 
+- slug: animate-icons
+  question: "I need to animate an icon"
+  h1: "Animate and morph SVG icons"
+  group: assets
+  aliases: [icon animation, svg morph, animated icons, lottie alternative]
+
 - slug: free-fonts
   question: "I need a font"
   h1: "Free and open-licensed fonts"
