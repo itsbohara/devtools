@@ -1,0 +1,6 @@
+name: "morphicons"
+url: https://www.morphicons.com
+needs: [animate-icons]
+pricing: oss-selfhost
+note: "MIT, ~7 KB, zero deps; any stroke icon morphs into any other across Lucide, Tabler and Heroicons. Mid-morph the path is polylines, so large filled shapes may facet"
+verified: 2026-08-05
