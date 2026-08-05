@@ -10,9 +10,19 @@ description: Use when adding a developer tool to this index, or triaging a tool 
 **The `note` is the product. Volume is not.**
 
 Anyone can list 400 tools. This index is worth using because each entry says *why it is the pick* or
-*what the catch is*, and because someone actually used it. A confidently-worded note invented from
-training data is worse than no entry — it makes the whole index untrustworthy, which is the exact
-failure this repo exists to avoid.
+*what the catch is*, and because that claim traces back to something checkable. A confidently-worded
+note invented from training data is worse than no entry — it makes the whole index untrustworthy,
+which is the exact failure this repo exists to avoid.
+
+**Every note must be traceable to a check.** Any of these count:
+
+- you have used the tool
+- you ran it — installed the package, started the container, read the source
+- you signed up for the free tier and saw what it does and does not include
+- you read the limit on the live pricing page today
+
+What is banned is a note written from memory. "I recall the free tier being generous" is the failure
+mode, and it does not become admissible by sounding confident.
 
 So: research first, ask rather than guess, and never state a limit you have not seen.
 
@@ -64,8 +74,9 @@ deleting it.** That demotion is the honest record of the rot other lists hide.
 This is the part a script cannot do. Ask only questions the research did not already answer, and
 prefer concrete ones. Good questions:
 
-- **"Have you actually used this?"** If no, say plainly that the entry should wait. This is a gate,
-  not a formality — an unused tool cannot get an honest note.
+- **"Have you used this, or should I go verify it?"** Hands-on use gives the best note, so ask. But
+  "no" is not a dead end — offer to ground it yourself by installing it, reading the source, or
+  signing up. Only a note nobody can trace to a check should wait.
 - **"What made you keep it, or what bit you?"** The answer usually *is* the note.
 - **"Did the free tier ask for a card?"** Never on the page, always worth knowing.
 - **"Which of these needs did you reach for it for?"** — when several plausibly fit.
@@ -166,8 +177,12 @@ Be warm about it, but do not bend. The curation *is* the value:
 
 - **Bulk adds.** "Add these 12 icon sites" — decline the batch. Ten used tools beat a hundred
   unused ones. Offer to do them one at a time, properly.
-- **Tools the human hasn't used.** The note cannot be honest. Suggest filing an issue as a reminder
-  instead.
+- **Tools nobody has checked.** Not "nobody has used" — nobody has *checked*. If neither of you has
+  used it and you cannot verify it either (site down, needs a paid account, claim is unfalsifiable),
+  the note would be invention. File an issue as a reminder instead.
+- **Notes that outrun the check.** Verifying by reading the source tells you what the code does, not
+  how it feels after a month. Say what you checked and no more — a note grounded in inspection should
+  not borrow the confidence of one grounded in use.
 - **Affiliate or referral links.** Always the bare canonical URL.
 - **Paid tools with no usable free offering.** A 14-day trial is `trial` — and if that is all there
   is, it probably does not belong here at all.
