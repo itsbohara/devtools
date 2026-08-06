@@ -24,6 +24,12 @@
   group: backend
   aliases: [fake smtp, email sandbox, catch outgoing mail]
 
+- slug: local-aws-emulator
+  question: "I need to test AWS locally"
+  h1: "Emulate AWS services on your machine"
+  group: backend
+  aliases: [localstack alternative, mock aws, aws emulator, offline aws, test s3 locally]
+
 - slug: free-icons
   question: "I need an icon"
   h1: "Free icon sets for developers"

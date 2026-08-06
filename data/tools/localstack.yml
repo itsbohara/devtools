@@ -1,0 +1,6 @@
+name: "LocalStack"
+url: https://www.localstack.cloud
+needs: [local-aws-emulator]
+pricing: freemium
+note: "Still runs locally and the Hobby tier is free, but non-commercial only and the container will not start without an auth token from their web app"
+verified: 2026-08-06

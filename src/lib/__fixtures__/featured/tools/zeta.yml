@@ -1,0 +1,7 @@
+name: Zeta
+url: https://zeta.example/icons
+needs: [free-icons]
+pricing: free
+note: Sorts last alphabetically, so featuring it proves the pin works
+verified: 2026-08-03
+featured: true

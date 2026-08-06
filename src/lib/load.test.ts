@@ -37,4 +37,14 @@ describe('loadData', () => {
     const { toolsByNeed } = loadData({ dataDir: fixture('valid'), today: TODAY });
     expect(toolsByNeed.get('free-icons')?.map((t) => t.slug)).toEqual(['koboyo']);
   });
+
+  it('puts featured tools first within a need, leaving the rest alphabetical', () => {
+    const { toolsByNeed } = loadData({ dataDir: fixture('featured'), today: TODAY });
+    expect(toolsByNeed.get('free-icons')?.map((t) => t.name)).toEqual(['Zeta', 'Alpha', 'Koboyo']);
+  });
+
+  it('keeps the global tool list alphabetical even when a tool is featured', () => {
+    const { tools } = loadData({ dataDir: fixture('featured'), today: TODAY });
+    expect(tools.map((t) => t.name)).toEqual(['Alpha', 'Koboyo', 'Zeta']);
+  });
 });

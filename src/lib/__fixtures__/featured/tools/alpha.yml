@@ -1,0 +1,6 @@
+name: Alpha
+url: https://alpha.example/icons
+needs: [free-icons]
+pricing: free
+note: Unfeatured, sorts first alphabetically
+verified: 2026-08-03
