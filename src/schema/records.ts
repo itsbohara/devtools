@@ -29,6 +29,7 @@ export const toolSchema = z.object({
   pricing: z.enum(PRICING),
   note: z.string().min(1).max(200),
   verified: isoDate,
+  featured: z.boolean().default(false),
 });
 
 export type Need = z.infer<typeof needSchema>;

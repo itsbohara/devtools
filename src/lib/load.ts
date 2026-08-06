@@ -69,9 +69,14 @@ export function loadData({
     throw new Error(`Invalid data:\n  - ${errors.join('\n  - ')}`);
   }
 
+  // Featured tools lead every need list they appear in; the global `tools` array stays purely
+  // alphabetical because the index and search payload are built from it.
   const toolsByNeed = new Map<string, Tool[]>(needs.map((need) => [need.slug, []]));
   for (const tool of tools) {
     for (const needSlug of tool.needs) toolsByNeed.get(needSlug)!.push(tool);
+  }
+  for (const list of toolsByNeed.values()) {
+    list.sort((a, b) => Number(b.featured) - Number(a.featured));
   }
 
   return { needs, tools, toolsByNeed };
