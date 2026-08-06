@@ -1,0 +1,6 @@
+name: "LocalStack"
+url: https://www.localstack.cloud
+needs: [local-aws-emulator]
+pricing: freemium
+note: "OSS repo archived Mar 2026; the free Hobby plan is non-commercial only, so commercial use needs a paid licence"
+verified: 2026-08-06

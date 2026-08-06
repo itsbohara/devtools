@@ -1,0 +1,6 @@
+name: "Floci"
+url: https://github.com/floci-io/floci
+needs: [local-aws-emulator]
+pricing: oss-selfhost
+note: "MIT drop-in for LocalStack Community — swap the image and env vars translate themselves; young and sponsor-funded"
+verified: 2026-08-06
