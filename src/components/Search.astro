@@ -71,11 +71,14 @@
     results.innerHTML = fuse
       .search(query)
       .slice(0, 12)
-      .map(
-        ({ item }: any) =>
-          `<li class="py-2.5"><a href="${item.href}" class="underline">${escape(item.title)}</a>` +
-          `<span class="ml-2 text-sm text-neutral-400">${escape(item.subtitle)}</span></li>`,
-      )
+      .map(({ item }: any) => {
+        // Tool hits leave the site, so they open alongside the index rather than replacing it.
+        const target = item.external ? ' target="_blank" rel="noopener"' : '';
+        return (
+          `<li class="py-2.5"><a href="${escape(item.href)}"${target} class="underline">${escape(item.title)}</a>` +
+          `<span class="ml-2 text-sm text-neutral-400">${escape(item.subtitle)}</span></li>`
+        );
+      })
       .join('');
   };
 
