@@ -1,0 +1,6 @@
+name: "Postplan"
+url: https://postplan.dev
+needs: [share-html-file]
+pricing: oss-selfhost
+note: "Uploads an agent's plan.html to a shareable link with no signup, but the document must be self-contained: link, iframe, form and external scripts are rejected, so inline CSS only, 512KB max"
+verified: 2026-08-08
