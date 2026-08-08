@@ -72,6 +72,12 @@
   group: hosting
   aliases: [free docker hosting, deploy container, paas free tier]
 
+- slug: share-html-file
+  question: "I need to share an HTML file"
+  h1: "Publish a single HTML file to a shareable link"
+  group: hosting
+  aliases: [publish single html page, share agent plan, host one html file, share ai artifact, agent html output]
+
 - slug: free-postgres
   question: "I need a Postgres database"
   h1: "Free Postgres hosting"
