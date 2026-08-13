@@ -1,0 +1,6 @@
+name: "moving icons"
+url: https://www.movingicons.dev/icons
+needs: [hover-animated-icons]
+pricing: oss-selfhost
+note: "556 MIT icons for Svelte, not React — the only non-React set here. Copy-paste .svelte components with no npm package, so re-copy to update"
+verified: 2026-08-13

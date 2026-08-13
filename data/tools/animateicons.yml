@@ -1,0 +1,6 @@
+name: "AnimateIcons"
+url: https://animateicons.in
+needs: [hover-animated-icons]
+pricing: oss-selfhost
+note: "544 MIT icons across Lucide and Hugeicons, and the only set with a real npm package plus an MCP server for agents. That package is still v0.2.0, so expect churn"
+verified: 2026-08-13

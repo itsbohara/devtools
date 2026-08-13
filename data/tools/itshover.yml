@@ -1,0 +1,6 @@
+name: "itshover"
+url: https://www.itshover.com/icons
+needs: [hover-animated-icons]
+pricing: oss-selfhost
+note: "264 React icons, each installed by one shadcn CLI command rather than copy-paste. Apache-2.0 not MIT — the only set here where you must keep the licence notice"
+verified: 2026-08-13

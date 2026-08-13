@@ -42,6 +42,12 @@
   group: assets
   aliases: [icon animation, svg morph, animated icons, lottie alternative]
 
+- slug: hover-animated-icons
+  question: "I need an icon that animates on hover"
+  h1: "Animated icons that react to hover"
+  group: assets
+  aliases: [animated icons react, lucide animated, icon micro-interactions, hover icon animation, copy paste animated icons]
+
 - slug: free-fonts
   question: "I need a font"
   h1: "Free and open-licensed fonts"
