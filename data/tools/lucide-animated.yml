@@ -1,0 +1,7 @@
+name: "lucide-animated"
+url: https://lucide-animated.com
+needs: [hover-animated-icons]
+pricing: oss-selfhost
+note: "466 Lucide icons animated with Motion, MIT. Copy-paste per icon — there is no npm package, so updating means re-copying. The default pick on React"
+verified: 2026-08-13
+featured: true

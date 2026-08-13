@@ -1,0 +1,6 @@
+name: "heroicons-animated"
+url: https://www.heroicons-animated.com
+needs: [hover-animated-icons]
+pricing: oss-selfhost
+note: "316 MIT icons built on Heroicons rather than Lucide, so they sit with Tailwind UI work. Ships as @heroicons-animated/react v1.3.0 instead of copy-paste"
+verified: 2026-08-13
