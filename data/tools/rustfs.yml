@@ -1,0 +1,6 @@
+name: "RustFS"
+url: https://github.com/rustfs/rustfs
+needs: [object-storage]
+pricing: oss-selfhost
+note: "S3-compatible MinIO alternative under Apache 2.0 instead of AGPL — but still pre-1.0 (1.0.0-beta.10 as of Jun 2026)"
+verified: 2026-08-14
