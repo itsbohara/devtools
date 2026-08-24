@@ -1,0 +1,6 @@
+name: "VaultS3"
+url: https://www.vaults3.com
+needs: [object-storage]
+pricing: oss-selfhost
+note: "Single binary S3 server that idles at ~17 MiB, a tenth of MinIO — but AGPL like MinIO, and a one-maintainer project with no company behind it"
+verified: 2026-08-24
