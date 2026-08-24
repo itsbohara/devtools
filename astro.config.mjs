@@ -5,6 +5,12 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
+import { loadData } from './src/lib/load.ts';
+import { lastmodByPath, normalizePath } from './src/lib/lastmod.ts';
+
+// Read once at config time rather than per entry; serialize() runs for every URL in the sitemap.
+const lastmod = lastmodByPath(loadData());
+
 // Served at the root of a custom domain, so there is no `base`. If this ever moves back to a
 // github.io project page, set `base: '/devtools'` — every internal link goes through src/lib/url.ts
 // and will adapt, but the published URLs would change.
@@ -17,5 +23,13 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap({ filter: (page) => !page.endsWith('/404') })]
+  integrations: [
+    sitemap({
+      filter: (page) => !page.endsWith('/404'),
+      serialize(item) {
+        const date = lastmod.get(normalizePath(new URL(item.url).pathname));
+        return date ? { ...item, lastmod: date } : item;
+      }
+    })
+  ]
 });
