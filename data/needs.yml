@@ -6,6 +6,12 @@
   group: networking
   aliases: [ngrok alternative, share local server, webhook tunnel]
 
+- slug: local-https
+  question: "I need HTTPS on localhost"
+  h1: "Run local development over HTTPS"
+  group: networking
+  aliases: [local ssl certificate, trusted dev certificate, named localhost url]
+
 - slug: webhook-inspector
   question: "I need to inspect a webhook"
   h1: "Inspect and debug incoming webhooks"

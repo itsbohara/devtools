@@ -1,0 +1,6 @@
+name: "portless"
+url: https://portless.sh
+needs: [local-https]
+pricing: oss-selfhost
+note: "Swaps port numbers for stable https://name.localhost URLs and handles the certs; from Vercel Labs, but pre-1.0 (0.15.5) and needs Node 24+"
+verified: 2026-08-24
