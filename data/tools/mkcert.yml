@@ -1,0 +1,6 @@
+name: "mkcert"
+url: https://github.com/FiloSottile/mkcert
+needs: [local-https]
+pricing: oss-selfhost
+note: "One command for a locally trusted cert for any hostname — still the default answer, though the last release was v1.4.4 in 2022"
+verified: 2026-08-24

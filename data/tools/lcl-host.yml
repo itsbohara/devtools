@@ -1,0 +1,6 @@
+name: "lcl.host"
+url: https://lcl.host
+needs: [local-https]
+pricing: freemium
+note: "Real Let's Encrypt certs for a *.lcl.host subdomain, so no local CA to install on every teammate's laptop; free tier caps you at 8 certs a month"
+verified: 2026-08-24
