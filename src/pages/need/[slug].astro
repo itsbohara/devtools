@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import { loadData } from '../../lib/load';
 import { url } from '../../lib/url';
+import { needPageLd } from '../../lib/jsonld';
 
 export async function getStaticPaths() {
   const { needs, toolsByNeed } = loadData();
@@ -19,6 +20,7 @@ const task = need.question.replace(/^I need to /, '');
 <Base
   title={`${need.h1} — free tools`}
   description={`${tools.length} free tools for when you need to ${task}. Curated, each with a note on the catch.`}
+  jsonLd={needPageLd(Astro.site!, need, tools)}
 >
   <a href={url()} class="text-sm text-neutral-500 underline">← all needs</a>
   <h1 class="mt-4 text-3xl font-semibold tracking-tight">{need.h1}</h1>

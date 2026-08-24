@@ -4,6 +4,7 @@ import PricingBadge from '../../components/PricingBadge.astro';
 import { loadData } from '../../lib/load';
 import { url } from '../../lib/url';
 import VerifiedLine from '../../components/VerifiedLine.astro';
+import { toolPageLd } from '../../lib/jsonld';
 
 // Only multi-need tools get a page. A single-need tool would render a near-duplicate of the need
 // page it came from, and a swarm of those reads as doorway pages to search engines.
@@ -25,6 +26,7 @@ const { tool, needs } = Astro.props;
 <Base
   title={`What's free on ${tool.name}?`}
   description={`${tool.name} covers ${needs.length} developer needs on its free tier. ${tool.note}`}
+  jsonLd={toolPageLd(Astro.site!, tool, needs)}
 >
   <a href={url()} class="text-sm text-neutral-500 underline">← all needs</a>
 

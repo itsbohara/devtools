@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Search from '../components/Search.astro';
 import NeedList from '../components/NeedList.astro';
 import { loadData } from '../lib/load';
+import { homeLd } from '../lib/jsonld';
 
 const { needs, tools, toolsByNeed } = loadData();
 ---
@@ -10,6 +11,7 @@ const { needs, tools, toolsByNeed } = loadData();
 <Base
   title="devtools — free developer tools, by what you need to do"
   description={`A curated index of ${tools.length} free developer tools, organised by task rather than by vendor category.`}
+  jsonLd={homeLd(Astro.site!, needs, tools.length)}
 >
   <h1 class="text-3xl font-semibold tracking-tight">I need to…</h1>
   <p class="mt-3 text-neutral-600 dark:text-neutral-400">
