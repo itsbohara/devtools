@@ -1,6 +1,6 @@
 name: "MinIO"
-url: https://min.io
+url: https://github.com/minio/minio
 needs: [object-storage]
 pricing: oss-selfhost
-note: "S3-compatible server you run yourself — the standard way to get real S3 behaviour in tests"
-verified: 2026-08-03
+note: "Still in countless S3 test setups, but the repo is archived and unmaintained, last binary release Oct 2025 — reach for RustFS or SeaweedFS in new setups"
+verified: 2026-10-02
