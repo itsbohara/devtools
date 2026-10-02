@@ -1,0 +1,6 @@
+name: "SeaweedFS"
+url: https://github.com/seaweedfs/seaweedfs
+needs: [object-storage]
+pricing: oss-selfhost
+note: "Apache 2.0, and one `weed mini` command gives a working S3 endpoint — but data recovery and self-healing are kept for the paid Enterprise Edition"
+verified: 2026-10-02
